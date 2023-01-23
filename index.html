@@ -5,9 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Legal Solution - Main</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- tailwind css -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        #popup:target{
+            display: block;
+        }
+    </style>
 </head>
-<body class="px-8 md:px-32">
+<body class="px-8 md:px-32 font-['EB Garamond']">
+    <header>
+        <!-- Navbar Section Start-->
+        <nav>
+            <div class="flex justify-between items-center py-4">
+                <!-- logo -->
+                <img src="./images/Group 2.png" alt="logo">
     
+                <!-- Hamburger -->
+                    <input class="peer hidden" type="checkbox" name="hamburger" id="hamburger">
+                    <label class="peer-checked:hamburger block relative cursor-pointer md:hidden border-2 border-[#B68C5A] peer-checked:border-2 peer-checked:border-black p-3 rounded-lg transition-all" for="hamburger">
+                        <div class="m-auto w-6 h-0.5 rounded bg-[#B68C5A] transition-all duration-300"></div>
+                        <div class="m-auto mt-2 w-6 h-0.5 rounded bg-[#B68C5A] transition-all duration-300"></div>
+                        <div class="m-auto mt-2 w-6 h-0.5 rounded bg-[#B68C5A] transition-all duration-300"></div>
+                    </label>
+
+                <!-- menu Navbar -->
+                <div class="-translate-y-full peer-checked:translate-y-0 md:translate-y-0 inset-0 fixed md:static pt-20 md:pt-0 bg-white md:bg-transparent -z-10 md:z-10 md:w-auto md:h-auto transition-all duration-300 ease-in-out">
+                    <div class="bg-white shadow-md md:bg-transparent md:shadow-none py-10 md:py-0 flex flex-col md:flex-row md:items-center px-8 space-y-4 md:space-y-0 md:space-x-12">
+                        <a class="text-gray-400 hover:text-black font-normal text-base" href="#">Home</a>
+                        <a class="text-gray-400 hover:text-black font-normal text-base" href="#">Services
+                            <i class="fa fa-angle-right text-xl ml-1 md:ml-2"></i>
+                        </a>
+                        <a class="text-gray-400 hover:text-black font-normal text-base" href="#">Cases
+                            <i class="fa fa-angle-right text-xl ml-1 md:ml-2"></i>
+                        </a>
+                        <a class="text-gray-400 hover:text-black font-normal text-base" href="#">Blog
+                            <i class="fa fa-angle-right text-xl ml-1 md:ml-2"></i>
+                        </a>
+                        <a class="text-gray-400 hover:text-black font-normal text-base" href="#">Contact Us
+                            <i class="fa fa-angle-right text-xl ml-1 md:ml-2"></i>
+                        </a>
+                        <a href="#popup" class="bg-[#B68C5A] text-white hover:text-black py-2 px-3 rounded-lg font-semibold">Free Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar Section End-->
+        <!-- Modal Section Start -->
+            <section id="popup" class="hidden z-10">
+                <div class="absolute top-1/2 md:top-40 left-10 md:left-1/2 right-10 md:right-32 bg-[#B68C5A] p-5 md:p-10 rounded-lg">
+                    <h1 class="text-xl font-bold mb-2">Consultation Lawyer</h1>
+                    <p class="text-justify text-gray-200">When a lawyer says that he or she will provide a free consultation it means that they will sit down with you, hear about your problem, and give you some initial thoughts about it, at no charge or obligation to you.</p>
+                    <a href="#" class="absolute top-2 right-4 text-white text-xl hover:text-black">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+            </section>
+        <!-- Modal Section End -->
+    </header>
 </body>
 </html>
