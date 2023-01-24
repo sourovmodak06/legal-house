@@ -33,8 +33,8 @@
         }
     </style>
 </head>
-<body class="px-8 md:px-32 font-EBGaramond">
-    <header>
+<body class="font-EBGaramond">
+    <header class="px-8 md:px-32">
         <!-- Navbar Section Start-->
         <nav>
             <div class="flex justify-between items-center py-4">
@@ -101,7 +101,7 @@
         </section>
         <!-- Banner Section End -->
     </header>
-    <main>
+    <main class="px-8 md:px-32">
         <!-- Legal Practice Area Start -->
         <section>
             <div class="text-center my-6 md:mt-20">
@@ -274,7 +274,7 @@
                     </div>
                 </div>
                 <div class="md:w-1/2">
-                    <div class="flex flex-col gap-4 px-4 mt-6 md:mt-0">
+                    <div class="flex flex-col gap-4 md:px-4 mt-6 md:mt-0">
                         <input type="text" placeholder="Your Name" class="bg-gray-200 p-4 rounded-lg">
                         <input type="email" placeholder="Your Email" class="bg-gray-200 p-4 rounded-lg">
                         <input type="text" placeholder="Subject" class="bg-gray-200 p-4 rounded-lg">
@@ -286,5 +286,42 @@
         </section>
         <!-- Contact Us Section End -->
     </main>
+    <footer class="bg-black mt-20">
+        <section class="grid grid-cols-1 md:grid-cols-4 gap-10 py-14 px-8 md:px-32 text-white">
+            <div>
+                <img src="./images/Group 37.png" alt="">
+                <p class="w-3/4 mt-4 md:mt-7 text-gray-300">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-extrabold mb-4 md:mb-10">Usefull Link</h3>
+                <ul class="text-gray-300 cursor-pointer">
+                    <li>Homes</li>
+                    <li>About Us</li>
+                    <li>Cases</li>
+                    <li>Blog</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-extrabold mb-4 md:mb-10">Contact Now</h3>
+                <p class="text-gray-300">555 4th 5t NW, Washington</p>
+                <p class="text-gray-300">DC 20530, United States</p>
+                <p class="text-gray-300 mt-3">+88 01750 000 000</p>
+                <p class="text-gray-300">+88 01750 000 000</p>
+                <p class="text-gray-300 mt-3">info@gmail.com</p>
+                <p class="text-gray-300">info@gmail.com</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-extrabold mb-4 md:mb-10">Subscribe</h3>
+                <p class="w-3/4 text-gray-300">Subscribe for our latest & Articles. We Won't Give You Spam Mails</p>
+                <div class="mt-4 flex">
+                    <input type="text" placeholder="Email Address" class="placeholder:text-gray-600 text-black rounded-lg px-6 w-3/4">
+                    <button class="bg-bgColor text-white hover:text-black px-4 py-2 rounded-lg font-semibold -ml-2">
+                        <i class="fa fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </footer>
 </body>
 </html>
