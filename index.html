@@ -13,30 +13,44 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- tailwind css -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                bgColor : "#B68C5A",
+              },
+              fontFamily:{
+                EBGaramond : ["EB Garamond", "serif"],
+              },
+            },
+          },
+        };
+      </script>
     <style>
         #popup:target{
             display: block;
         }
     </style>
 </head>
-<body class="px-8 md:px-32 font-['EB Garamond']">
+<body class="px-8 md:px-32 font-EBGaramond">
     <header>
         <!-- Navbar Section Start-->
         <nav>
             <div class="flex justify-between items-center py-4">
                 <!-- logo -->
-                <img src="./images/Group 2.png" alt="logo">
+                <img src="./images/Group 2.png" alt="logo" class="z-30 md:z-0">
     
                 <!-- Hamburger -->
                     <input class="peer hidden" type="checkbox" name="hamburger" id="hamburger">
-                    <label class="peer-checked:hamburger block relative cursor-pointer md:hidden border-2 border-[#B68C5A] peer-checked:border-2 peer-checked:border-black p-3 rounded-lg transition-all" for="hamburger">
-                        <div class="m-auto w-6 h-0.5 rounded bg-[#B68C5A] transition-all duration-300"></div>
-                        <div class="m-auto mt-2 w-6 h-0.5 rounded bg-[#B68C5A] transition-all duration-300"></div>
-                        <div class="m-auto mt-2 w-6 h-0.5 rounded bg-[#B68C5A] transition-all duration-300"></div>
+                    <label class="peer-checked:hamburger block relative cursor-pointer md:hidden border-2 border-bgColor peer-checked:border-2 peer-checked:border-black p-3 rounded-lg transition-all" for="hamburger">
+                        <div class="m-auto w-6 h-0.5 rounded bg-bgColor transition-all duration-300"></div>
+                        <div class="m-auto mt-2 w-6 h-0.5 rounded bg-bgColor transition-all duration-300"></div>
+                        <div class="m-auto mt-2 w-6 h-0.5 rounded bg-bgColor transition-all duration-300"></div>
                     </label>
 
                 <!-- menu Navbar -->
-                <div class="-translate-y-full peer-checked:translate-y-0 md:translate-y-0 inset-0 fixed md:static pt-20 md:pt-0 bg-white md:bg-transparent -z-10 md:z-10 md:w-auto md:h-auto transition-all duration-300 ease-in-out">
+                <div class="-translate-y-full peer-checked:translate-y-0 md:translate-y-0  fixed md:static pt-20 md:pt-0 bg-white md:bg-transparent top-0 left-0 bottom-0 right-24 md:right-0 z-10 md:w-auto md:h-auto transition-all duration-300 ease-in-out">
                     <div class="bg-white shadow-md md:bg-transparent md:shadow-none py-10 md:py-0 flex flex-col md:flex-row md:items-center px-8 space-y-4 md:space-y-0 md:space-x-12">
                         <a class="text-gray-400 hover:text-black font-normal text-base" href="#">Home</a>
                         <a class="text-gray-400 hover:text-black font-normal text-base" href="#">Services
@@ -51,15 +65,16 @@
                         <a class="text-gray-400 hover:text-black font-normal text-base" href="#">Contact Us
                             <i class="fa fa-angle-right text-xl ml-1 md:ml-2"></i>
                         </a>
-                        <a href="#popup" class="bg-[#B68C5A] text-white hover:text-black py-2 px-3 rounded-lg font-semibold">Free Consultation</a>
+                        <a href="#popup" class="md:hidden bg-bgColor text-white hover:text-black py-2 px-3 rounded-lg font-semibold">Free Consultation</a>
                     </div>
                 </div>
+                <a href="#popup" class="hidden md:block bg-bgColor text-white hover:text-black py-2 px-3 rounded-lg font-semibold">Free Consultation</a>
             </div>
         </nav>
         <!-- Navbar Section End-->
         <!-- Modal Section Start -->
-            <section id="popup" class="hidden z-10">
-                <div class="absolute top-1/2 md:top-40 left-10 md:left-1/2 right-10 md:right-32 bg-[#B68C5A] p-5 md:p-10 rounded-lg">
+            <section id="popup" class="hidden">
+                <div class="absolute top-1/2 md:top-40 left-10 md:left-1/2 right-10 md:right-32 bg-bgColor p-5 md:p-10 rounded-lg z-10">
                     <h1 class="text-xl font-bold mb-2">Consultation Lawyer</h1>
                     <p class="text-justify text-gray-200">When a lawyer says that he or she will provide a free consultation it means that they will sit down with you, hear about your problem, and give you some initial thoughts about it, at no charge or obligation to you.</p>
                     <a href="#" class="absolute top-2 right-4 text-white text-xl hover:text-black">
@@ -68,6 +83,23 @@
                 </div>
             </section>
         <!-- Modal Section End -->
+        <!-- Banner Section Start -->
+        <section>
+            <div class="relative">
+            <img class="bg-cover h-96 md:h-auto rounded-lg mt-10 md:mt-5" src="./images/Rectangle 4.png" alt="Banner">
+               <div class="absolute top-4 md:top-10">
+                    <article class="text-white md:w-2/3 px-6 md:px-0 container m-auto">
+                        <h1 class="text-2xl md:text-7xl font-extrabold text-center">We Provide Effective Legal Solutions</h1>
+                        <p class="text-justify md:text-center py-5 md:py-10 md:px-28">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+                    </article> 
+                    <div class="flex justify-center gap-2">
+                        <input type="email" placeholder="Search your services" class="rounded-lg md:w-1/3 px-4">
+                        <button class="bg-bgColor text-white hover:text-black py-2 px-3 rounded-lg font-semibold">Search</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Banner Section End -->
     </header>
 </body>
 </html>
